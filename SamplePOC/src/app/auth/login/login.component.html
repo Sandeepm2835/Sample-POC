@@ -1,0 +1,36 @@
+<div class="login-cntr cntr">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="login-main bor-rad-25 d-flex">
+          <div class="login-image bg-pos-repeat wid-40"></div>
+          <div class="wid-60 pl-5">
+            <div class="text-center">
+              <h1 class="head-text">LOGIN</h1>
+            </div>
+            <hr>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" fxLayout="column" fxFLayoutAlign="center center" fxLayoutGap="10px"> 
+              <mat-form-field>
+                <input type="email" matInput placeholder="Email" formControlName="email">
+                <mat-error *ngIf="loginForm.get('email').hasError('required')">Field must not be empty</mat-error>
+                <mat-error *ngIf="!loginForm.get('email').hasError('required')">Please enter valid email</mat-error>
+              </mat-form-field>
+              <mat-form-field>  
+                <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password">
+                <mat-icon matSuffix (click)="hide = !hide" role="button">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  <mat-error *ngIf="loginForm.get('password').hasError('required')">Field must not be empty</mat-error>
+                  <mat-error *ngIf="loginForm.get('password').errors?.minlength?.requiredLength">Has to be 6 Minimum Characters</mat-error>
+                </mat-form-field>
+              <div class="text-center mt-30">
+                <button type="submit" class="sub-button w-100" [disabled]="!loginForm.valid">Login</button>
+              </div>
+            </form>
+            <div class="mt-30 text-center">
+              <span>Not registered?</span><span class="connect-link pl-2"><a (click)="onSignup()" role="button">Sign-Up</a></span>
+            </div> 
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>

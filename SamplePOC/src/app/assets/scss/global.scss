@@ -1,0 +1,64 @@
+@import './var.scss';
+
+.cntr {
+  margin: auto;
+  margin-top: 50px;
+}
+
+.head-text {
+  color: $head-text;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.bor-rad-25 {
+  border-radius: 25px;
+}
+
+.sub-button {
+  cursor: pointer;
+  border-radius: 5em;
+  color: var(--white);
+  background: $btn-background;
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.sub-button:disabled {
+  opacity: .65;
+  cursor: no-drop;
+}
+
+.connect-link {
+  color: dodgerblue;
+  padding-left: 10px;
+
+  a:hover, a:active {
+    color: #0a16a9;
+  }
+}
+
+.wid-40 {
+  width: 40%;
+}
+
+.wid-60 {
+  width: 60%;
+}
+
+.bg-pos-repeat {
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.box-shad {
+  box-shadow: 0 0 5px 5px rgb(0 0 0 / 20%);
+}

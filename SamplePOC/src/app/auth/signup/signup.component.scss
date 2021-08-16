@@ -1,0 +1,23 @@
+@import '../../assets/scss/global.scss';
+
+.signup-cntr {
+  .signup-image {
+    background: url('../../assets/img/signup.jpg');
+    background-size: 300px 535px;;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  
+  .signup-main {
+    width: 75%;
+    height: auto;
+    padding: 3%;
+    background: var(--white);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    mat-form-field {
+      width: 45%;
+    }
+  }
+}  
