@@ -1,0 +1,25 @@
+@import '../../assets/scss/global.scss';
+@import '../../assets/scss/var.scss';
+
+.profile-cntr {
+  max-width: 768px;
+  
+  .profile-main {
+    height: auto;
+    padding: 3%;
+    background: var(--white);
+
+    .profile-image {
+      background: url('../../assets/img/profile.png');
+      height: 250px;
+    }
+
+    mat-form-field, .profile-btn {
+      width: 45%;
+    }
+
+    .profile-btn {
+      margin: auto 0;
+    }
+  }
+}
